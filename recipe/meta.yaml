@@ -13,7 +13,7 @@ source:
 
 build:
   number: 1002
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   skip: True  # [not linux64 or not py27]
 
 requirements:
